@@ -1,0 +1,35 @@
+body {display: flex;justify-content: center;}
+
+.main-container {width: 1000px;background-color: lightyellow; display: flex;justify-content: center;align-items: center;;padding: 20px;border-radius: 10px;box-shadow: 5px 5px 5px lightblue;}
+
+.left-panel {flex: 30%; padding: 5px;}
+.photo-panel {display: flex;flex-wrap: wrap;}
+.photo-panel img {width: 100%;height: auto;}
+.text-content {font-family: Arial, Helvetica, sans-serif;}
+
+.right-panel {flex: 70%; padding: 5px;}
+.section-title {font-weight: bold;border-style: none none solid none;border-color: darkslategray;align-self: flex-start;}
+
+.education {font-family: Arial, Helvetica, sans-serif;}
+.year {flex: 20%;text-align: left;color: darkslategray;}
+.description {flex: 80%;text-align: left;}
+
+.skill {font-family: Arial, Helvetica, sans-serif;}
+.tag {display: inline;border-radius: 3px;padding: 5px;background-color: lightblue;color: darkblue;}
+
+.homework-und-lab {font-family: Arial, Helvetica, sans-serif;}
+.hw-column {flex: 50%;background-color: lightgray;color: darkslategray;border-radius: 10px;padding: 5px;margin: 5px;}
+.lab-column {flex: 50%;background-color: lightgray;color: darkslategray;border-radius: 10px;padding: 5px;margin: 5px;}
+.hw-column a:link {color: darkslategray;text-decoration: none;}
+.hw-column a:active {color: darkslategray;text-decoration: none;}
+.hw-column a:visited {color: darkslategray;text-decoration: none;}
+.hw-column a:hover {color:red;text-decoration: none;}
+.lab-column a:link {color: darkslategray;text-decoration: none;}
+.lab-column a:active {color: darkslategray;text-decoration: none;}
+.lab-column a:visited {color: darkslategray;text-decoration: none;}
+.lab-column a:hover {color:red;text-decoration: none;}
+
+.favorate-music {font-family: Arial, Helvetica, sans-serif;}
+.music-icon {display: flex;  justify-content: space-evenly;}
+.music-icon p {text-align: center; margin: 10px;width: 25%;}
+.music-note {color: darkslategray;}
