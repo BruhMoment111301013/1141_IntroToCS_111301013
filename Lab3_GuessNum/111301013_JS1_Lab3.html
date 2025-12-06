@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>111301013_Number Guessing Game</title>
+</head>
+<body>
+    <h1>111301013_Number Guessing Game</h1>
+
+    <div id="result"></div>
+
+    <script>
+        var answer = Math.floor(Math.random() * 100) + 1;
+        var chances = 7;
+        var lower = 1;
+        var upper = 100;
+        var resultDiv = document.getElementById("result");
+
+        while (chances > 0) {
+
+            var input = window.prompt(
+                "輸入 " + lower + " 到 " + upper + " 之間的整數。\n剩餘機會：" + chances + " 次。"
+            );
+
+            if (input === null) {
+                alert("輸入值不可為空。");
+                continue;
+            }
+
+            input = input.trim();
+            if (input === "" || isNaN(input)) {
+                alert("輸入值須為數值。");
+                continue;
+            }
+
+            var guess = Number(input);
+
+            if (guess < lower || guess > upper) {
+                alert("輸入值超出有效範圍。");
+                continue;
+            }
+
+            if (guess === answer) {
+                alert("答對! 正確答案是 " + answer + "。");
+                var img = document.createElement("img");
+                img.src = "images/correct.jpg";
+                resultDiv.appendChild(img);
+                break;
+            } else {
+                chances--;
+                if (guess < answer) {
+                    lower = guess + 1;
+                } else {
+                    upper = guess - 1;
+                }
+            }
+        }
+
+        if (chances === 0) {
+            alert("已無剩餘機會！正確答案是 " + answer + "。");
+            var img = document.createElement("img");
+            img.src = "images/wrong.jpg";
+            resultDiv.appendChild(img);
+        }
+    </script>
+</body>
+</html>
